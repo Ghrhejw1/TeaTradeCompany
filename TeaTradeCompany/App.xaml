@@ -1,0 +1,11 @@
+﻿<Application x:Class="TeaTradeCompany.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TeaTradeCompany"
+             StartupUri="/View/MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <local:ApplicationDbContext x:Key="Data Source=localhost;Initial Catalog=Tea_Plantation;Integrated Security=True;Encrypt=True;Trust Server Certificate=True"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

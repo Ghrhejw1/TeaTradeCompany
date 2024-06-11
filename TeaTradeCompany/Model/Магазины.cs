@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TeaTradeCompany.Model
+{
+    public class Магазины
+    {
+        [Key]
+        public int ID_Магазина { get; set; }
+        public string Название { get; set; }
+        public string Адрес { get; set; }
+        public string Телефон { get; set; }
+        public string Email { get; set; }
+        public DateTime? Часы_работы { get; set; }
+        public ICollection<Покупатель> Покупатели { get; set; }
+    }
+}

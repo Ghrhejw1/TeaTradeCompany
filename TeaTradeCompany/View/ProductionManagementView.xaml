@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="TeaTradeCompany.View.ProductionManagementView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:TeaTradeCompany.ViewModels"
+             mc:Ignorable="d">
+    <UserControl.DataContext>
+        <viewModels:ProductionManagementViewModel/>
+    </UserControl.DataContext>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Header -->
+        <TextBlock Text="Управление производством" FontSize="20" Grid.ColumnSpan="2" Margin="0,0,0,10"/>
+
+        <!-- Section for Growth Tracking -->
+        <GroupBox Header="Отслеживание роста" Grid.Row="1" Grid.Column="0" Margin="5">
+            <StackPanel>
+                <TextBlock Text="Параметры климата" FontWeight="Bold"/>
+                <DataGrid ItemsSource="{Binding ClimateParameters}" AutoGenerateColumns="False" Height="150">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Температура" Binding="{Binding Температура}"/>
+                        <DataGridTextColumn Header="Влажность" Binding="{Binding Влажность}"/>
+                        <DataGridTextColumn Header="Осадки" Binding="{Binding Осадки}"/>
+                        <DataGridTextColumn Header="Дата измерения" Binding="{Binding Дата_измерения}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Button Content="Добавить параметры" Width="150" Margin="5"/>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- Section for Tea Processing Control -->
+        <GroupBox Header="Контроль обработки" Grid.Row="1" Grid.Column="1" Margin="5">
+            <StackPanel>
+                <TextBlock Text="Технологические процессы" FontWeight="Bold"/>
+                <DataGrid ItemsSource="{Binding ProcessingSteps}" AutoGenerateColumns="False" Height="150">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Название" Binding="{Binding Название}"/>
+                        <DataGridTextColumn Header="Описание" Binding="{Binding Описание}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Button Content="Добавить процесс" Width="150" Margin="5"/>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- Section for Plot Management -->
+        <GroupBox Header="Управление участками" Grid.Row="2" Grid.ColumnSpan="2" Margin="5">
+            <StackPanel>
+                <TextBlock Text="Участки плантации" FontWeight="Bold"/>
+                <DataGrid ItemsSource="{Binding PlantationPlots}" AutoGenerateColumns="False" Height="150">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Название" Binding="{Binding Название}"/>
+                        <DataGridTextColumn Header="Площадь" Binding="{Binding Площадь}"/>
+                        <DataGridTextColumn Header="Тип растений" Binding="{Binding Тип_растений}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Button Content="Добавить участок" Width="150" Margin="5"/>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</UserControl>

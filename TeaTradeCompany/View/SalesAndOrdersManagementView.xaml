@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="TeaTradeCompany.View.SalesAndOrdersManagementView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d">
+    <Grid>
+        <!-- Здесь можно добавить элементы управления для управления продажами -->
+        <TextBlock Text="Управление продажами и заказами" FontSize="20" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+        <!-- Пример контролов -->
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Обработка заказов" Width="200" Height="50" Margin="0,0,0,10"/>
+            <Button Content="Взаимодействие с покупателями" Width="200" Height="50" Margin="0,0,0,10"/>
+            <!-- Добавьте здесь другие элементы управления по вашему усмотрению -->
+        </StackPanel>
+    </Grid>
+</UserControl>

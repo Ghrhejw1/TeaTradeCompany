@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="TeaTradeCompany.View.LogisticsAndSupplyChainManagementView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d">
+    <Grid>
+        <!-- Здесь можно добавить элементы управления для управления логистикой -->
+        <TextBlock Text="Управление логистикой и поставками" FontSize="20" Margin="10"/>
+
+        <!-- Пример контролов -->
+        <StackPanel Margin="10" VerticalAlignment="Center">
+            <Button Content="Управление складом" Width="200" Height="50" Margin="0 0 0 10"/>
+            <Button Content="Организация поставок" Width="200" Height="50" Margin="0 0 0 10"/>
+            <Button Content="Маршрутизация и доставка" Width="200" Height="50" Margin="0 0 0 10"/>
+            <Button Content="Отслеживание грузов" Width="200" Height="50" Margin="0 0 0 10"/>
+            <Button Content="Управление инвентаризацией" Width="200" Height="50" Margin="0 0 0 10"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
